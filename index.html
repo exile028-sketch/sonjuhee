@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="손주희 포트폴리오">
+<meta property="og:description" content="Son Ju Hee">
+<meta property="og:image" content="https://exile028-sketch.github.io/sonjuhee/images/01.jpg">
+<meta property="og:url" content="https://exile028-sketch.github.io/sonjuhee/">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light">
+<meta name="theme-color" content="#dfe5d3">
+<meta name="format-detection" content="telephone=no">
+<title>손주희 Son Ju Hee</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#dfe5d3;--paper2:#d2dac3;--ink:#262b22;--muted:#5c6553;--pome:#44573a;--line:#c4cdb3;
+        --sl:env(safe-area-inset-left,0px);--sr:env(safe-area-inset-right,0px);--sb:env(safe-area-inset-bottom,0px);--st:env(safe-area-inset-top,0px)}
+  :root{color-scheme:light only}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{background:#dfe5d3}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+  img{max-width:100%}
+  body{background:var(--paper);color:var(--ink);font-family:"Noto Sans KR",-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;font-weight:400;line-height:1.8;
+       word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit}
+  button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;-webkit-appearance:none;appearance:none}
+  .serif,h1,h2,h3,.quote{font-family:"Nanum Myeongjo",serif}
+  .wrap{max-width:1040px;margin:0 auto;padding-left:calc(20px + var(--sl));padding-right:calc(20px + var(--sr))}
+
+  /* 메뉴 */
+  nav{position:-webkit-sticky;position:sticky;top:0;z-index:20;background:rgba(223,229,211,.94);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);padding-top:var(--st)}
+  nav .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;min-height:52px;gap:4px 10px;padding-top:4px;padding-bottom:4px}
+  nav .logo{font-family:"Nanum Myeongjo",serif;font-weight:800;font-size:18px;letter-spacing:.1em;text-decoration:none;white-space:nowrap}
+  nav .logo span{color:var(--pome)}
+  nav ul{display:flex;flex-wrap:wrap;gap:4px 18px;list-style:none;font-size:14px;white-space:nowrap}
+  nav ul a{display:inline-block;padding:6px 0}
+  nav ul a{text-decoration:none;color:var(--muted)}
+  nav ul a:hover,nav ul a.on{color:var(--pome)}
+  nav ul a.on{font-weight:700}
+
+  /* 첫 화면 */
+  .hero{padding:44px 0 56px;text-align:center}
+  .hero .eyebrow{font-size:13px;letter-spacing:.3em;color:var(--pome);margin-bottom:14px}
+  .hero h1{font-weight:800;font-size:clamp(40px,12vw,80px);letter-spacing:.16em;line-height:1.1;margin-left:.16em}
+  .hero .hanja{font-family:"Nanum Myeongjo",serif;font-size:16px;color:var(--muted);letter-spacing:.3em;margin-top:10px}
+  .hero .en{font-family:"Nanum Myeongjo",serif;font-size:13px;letter-spacing:.3em;color:var(--muted);margin-top:2px}
+  .hero figure{margin:36px auto 0;max-width:640px}
+  .hero .zoom{display:block;width:100%;background:#fff;padding:12px;box-shadow:0 18px 40px -24px rgba(60,30,20,.55)}
+  .hero img{display:block;width:100%;height:auto;max-height:82vh;object-fit:contain}
+  figcaption{margin-top:10px;font-size:14px;line-height:1.6;text-align:center}
+  figcaption .t{display:block;font-family:"Nanum Myeongjo",serif;font-weight:700;font-size:15px}
+  figcaption .m{display:block;color:var(--muted);font-size:13px}
+  .recent{max-width:640px;margin:44px auto 0;text-align:left}
+  .recent h2{font-size:18px;color:var(--pome);margin-bottom:10px;letter-spacing:.05em}
+  .recent ul{list-style:none;border-top:1px solid var(--line)}
+  .recent li{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:12px;padding:12px 0;border-bottom:1px dashed var(--line)}
+  .recent li b{font-family:"Nanum Myeongjo",serif;color:var(--pome);font-size:15px;grid-row:span 2}
+  .recent .rt{font-size:15px;font-weight:500}
+  .recent .rp{font-size:13px;color:var(--muted)}
+
+  section{padding:64px 0;border-top:1px solid var(--line);scroll-margin-top:56px}
+  .sec-title{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 12px;margin-bottom:30px}
+  .sec-title h2{font-weight:800;font-size:clamp(22px,6.5vw,28px);letter-spacing:.06em}
+  .sec-title small{font-size:12px;letter-spacing:.3em;color:var(--pome)}
+
+  /* 작업 이야기 */
+  .about-grid{display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:start}
+  .portrait{margin:0}
+  .portrait img{display:block;width:100%;max-width:370px;height:auto;margin:0 auto}
+  .portrait figcaption{font-size:13px;color:var(--muted)}
+  .quote{border-left:3px solid var(--pome);padding:4px 0 4px 18px;margin:0 0 30px}
+  .quote p{font-size:clamp(17px,4.6vw,21px);line-height:1.7;font-weight:700;color:var(--pome)}
+  .quote cite{display:block;font-family:"Noto Sans KR",sans-serif;font-style:normal;font-size:13px;color:var(--muted);margin-top:8px}
+  .note h3{font-size:17px;margin-bottom:10px;letter-spacing:.05em}
+  .note p{font-family:"Nanum Myeongjo",serif;font-size:16.5px;line-height:2;margin-bottom:14px}
+  .note p.src{font-family:"Noto Sans KR",sans-serif;font-size:12.5px;line-height:1.6;color:var(--muted);margin-top:4px}
+  .note em{font-style:normal;color:var(--pome);font-weight:700}
+
+  /* 작품 */
+  .series{margin-bottom:44px}
+  .series h3{font-size:19px;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+  .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}
+  .grid figure{margin:0}
+  .grid figure.wide{grid-column:1/-1}
+  .grid .zoom{display:flex;align-items:center;justify-content:center;width:100%;background:#fff;padding:10px;box-shadow:0 10px 24px -18px rgba(60,30,20,.55)}
+  .grid img{display:block;max-width:100%;width:auto;height:auto;max-height:70vh;object-fit:contain}
+
+  /* 약력 */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));grid-template-columns:repeat(auto-fit,minmax(min(150px,100%),1fr));gap:12px;margin-bottom:34px}
+  .stat{background:var(--paper2);padding:18px 14px;text-align:center}
+  .stat b{display:block;font-family:"Nanum Myeongjo",serif;font-size:clamp(24px,7vw,32px);font-weight:800;color:var(--pome);line-height:1.3}
+  .stat span{font-size:13px;color:var(--muted)}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-bottom:46px}
+  .cols h3,.block h3{font-size:18px;color:var(--pome);margin-bottom:10px}
+  .cols ul{list-style:none}
+  .cols li{padding:8px 0;border-bottom:1px dashed var(--line);font-size:15px}
+  .block{margin-bottom:46px}
+  .block .hint{font-size:13px;color:var(--muted);margin:-4px 0 12px}
+  table{width:100%;border-collapse:collapse;font-size:14px;background:#fff}
+  th{background:var(--paper2);text-align:left;font-weight:500;padding:10px;font-size:13px;color:var(--muted);white-space:nowrap}
+  td{padding:10px;border-top:1px solid var(--line);vertical-align:top}
+  td.y{font-family:"Nanum Myeongjo",serif;font-weight:700;color:var(--pome);white-space:nowrap}
+  td.p{white-space:nowrap;color:var(--muted)}
+  td.pl{color:var(--muted)}
+  em.no{font-style:normal;font-size:12px;color:#fff;background:var(--pome);padding:1px 6px;border-radius:3px;white-space:nowrap;margin-left:4px}
+  details{background:#fff;border:1px solid var(--line);margin-bottom:8px}
+  summary{list-style:none;cursor:pointer;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+  summary::-webkit-details-marker{display:none}
+  summary span{font-family:"Nanum Myeongjo",serif;font-weight:700;font-size:16px}
+  summary small{color:var(--muted);font-size:13px;white-space:nowrap}
+  summary::after{content:"+";color:var(--pome);font-size:20px;line-height:1;padding-left:4px}
+  details[open] summary::after{content:"−"}
+  summary small{margin-left:auto}
+  details ul{list-style:none;padding:0 14px 12px}
+  details li{font-size:14px;padding:6px 0;border-top:1px dashed var(--line)}
+
+  /* 연락처 */
+  .contact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start}
+  .card{background:#fff;padding:22px 18px;border-top:3px solid var(--pome)}
+  .card .label{font-size:12px;letter-spacing:.25em;color:var(--muted);margin-bottom:6px}
+  .card .val{font-family:"Nanum Myeongjo",serif;font-size:clamp(16px,5vw,19px);font-weight:700;overflow-wrap:anywhere}
+  .card .sub{font-size:15px;line-height:1.7;margin-top:2px}
+  .lnk{display:inline-block;margin-top:12px;font-size:14px;padding:8px 16px;border:1.5px solid var(--pome);color:var(--pome);text-decoration:none;border-radius:8px}
+  .links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}
+  a.vid{display:inline-block;white-space:nowrap;margin-left:6px;font-size:13px;font-weight:700;color:var(--pome);text-decoration:none;border:1px solid var(--pome);border-radius:4px;padding:0 6px;line-height:1.6}
+  .vsrc{font-size:12px;color:var(--muted);white-space:nowrap}
+  .links a{display:block;text-align:center;padding:14px 8px;border:1.5px solid var(--pome);border-radius:10px;color:var(--pome);text-decoration:none;font-weight:700;font-size:16px;background:#fff}
+
+  /* 길찾기 테스트 페이지와 같은 버튼 */
+  .btn{display:block;width:100%;box-sizing:border-box;padding:16px;margin:10px 0;border:0;border-radius:10px;font-size:17px;font-weight:700;cursor:pointer;-webkit-appearance:none;appearance:none}
+  .go{color:#fff;background:#44573a;white-space:nowrap;font-size:17px;font-size:clamp(13px,4.8vw,17px);padding-left:8px;padding-right:8px;letter-spacing:-0.2px}
+  @supports (overflow-wrap:anywhere){.go{white-space:normal}}
+  .copy{background:#fff;color:#44573a;border:1.5px solid #44573a}
+  #msg{font-size:14px;color:#2f7a3a;min-height:20px;text-align:center}
+  .dim{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(30,20,15,.55);display:none;-webkit-box-align:end;align-items:flex-end;-webkit-box-pack:center;justify-content:center;z-index:40}
+  .dim.on{display:-webkit-box;display:flex}
+  .sheet{width:100%;max-width:440px;background:#ffffff;border-radius:18px 18px 0 0;padding:22px 18px 26px;padding-bottom:calc(26px + env(safe-area-inset-bottom));box-sizing:border-box;box-shadow:0 -6px 24px rgba(0,0,0,.18);max-height:90vh;max-height:90dvh;overflow-y:auto}
+  .sheet h2{margin:0 0 4px;font-size:20px;text-align:center;font-family:"Noto Sans KR",sans-serif}
+  .sheet p{margin:0 0 16px;font-size:14px;color:#5c6553;text-align:center}
+  .opt{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;padding:16px 14px;margin:10px 0;border:1.5px solid #c4cdb3;border-radius:12px;background:#fff;color:#262b22;text-decoration:none}
+  .opt:active{background:#dfe5d3}
+  .dot{-webkit-box-flex:0;flex:0 0 46px;width:46px;height:46px;margin-right:14px;border-radius:12px;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;color:#fff;font-weight:800;font-size:20px}
+  .dot.t{background:#3d5afe}.dot.n{background:#03a94d}.dot.g{background:#e8453c}
+  .opt span{font-size:19px;font-weight:700;line-height:1.3;min-width:0;overflow-wrap:anywhere}
+  .opt small{display:block;font-size:13px;font-weight:400;color:#7a6f68;margin-top:3px}
+  .close{display:block;width:100%;margin-top:14px;padding:14px;border:0;border-radius:12px;background:#d2dac3;color:#262b22;font-size:17px;font-weight:700;-webkit-appearance:none;appearance:none}
+
+  footer{padding:36px 0 calc(96px + var(--sb));text-align:center;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
+  footer .fl{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 18px;margin-bottom:10px}
+  footer a{color:var(--pome)}
+
+  #totop{position:fixed;right:calc(14px + var(--sr));bottom:calc(18px + var(--sb));z-index:30;border:0;border-radius:24px;padding:11px 16px;background:var(--pome);color:#fff;font-size:15px;font-weight:700;box-shadow:0 6px 18px rgba(0,0,0,.25);display:none;white-space:nowrap}
+  #totop.on{display:block}
+  @media (max-width:300px){#totop{font-size:13px;padding:8px 12px;right:calc(10px + var(--sr))}}
+
+  /* 크게 보기 */
+  .lb{position:fixed;top:0;right:0;bottom:0;left:0;background:rgba(30,22,18,.95);display:none;flex-direction:column;align-items:center;justify-content:center;z-index:50;
+      padding:calc(14px + var(--st)) calc(12px + var(--sr)) calc(14px + var(--sb)) calc(12px + var(--sl))}
+  .lb.on{display:flex}
+  .lb img{display:block;max-width:100%;max-height:calc(100vh - 190px);max-height:calc(100dvh - 190px);width:auto;height:auto;object-fit:contain}
+  .lb .cap{color:#dfe5d3;margin-top:12px;text-align:center;font-size:14px;line-height:1.5}
+  .lb .cap .t,.lb .cap .m{display:block}
+  .lb .cap .m{color:#cfc4b6}
+  .lbnav{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:4px 6px;margin-top:12px;color:#dfe5d3;font-size:15px}
+  .lbnav button{color:#dfe5d3;font-size:15px;font-weight:700;padding:8px 10px;border-radius:8px}
+  .lbnav button:active{background:rgba(255,255,255,.12)}
+  .lbnav button[disabled]{opacity:.35}
+  .lbnav .dotsep{color:#9c8f84}
+  .lbnav .count{white-space:nowrap}
+  .lbclose{margin-top:6px;color:#cfc4b6;font-size:14px;padding:6px 14px;border:1px solid #5c6553;border-radius:16px}
+
+  @media (max-width:760px){
+    .about-grid{grid-template-columns:1fr;gap:26px}
+    .cols{grid-template-columns:1fr;gap:26px}
+    .contact-grid{grid-template-columns:1fr}
+  }
+  @media (max-width:560px){
+    .links{grid-template-columns:1fr}
+    section{padding:48px 0}
+    .grid{grid-template-columns:1fr;gap:20px}
+    .grid .zoom{padding:8px}
+    /* 표를 카드처럼 */
+    table,tbody,tr,td{display:block;width:100%}
+    thead{display:none}
+    table{background:none}
+    tr{background:#fff;border:1px solid var(--line);margin-bottom:8px;padding:10px 12px}
+    td{border:0;padding:1px 0;white-space:normal!important}
+    td.y{font-size:14px}
+    td.n{font-size:15px;font-weight:500}
+    td.p,td.pl{font-size:13px}
+  }
+  @media (max-width:340px){
+    .wrap{padding-left:calc(14px + var(--sl));padding-right:calc(14px + var(--sr))}
+    nav .logo{font-size:15px;letter-spacing:.04em}
+    nav ul{gap:10px;font-size:12.5px}
+    .hero h1{letter-spacing:.1em;margin-left:.1em}
+    .hero .eyebrow{letter-spacing:.15em;font-size:12px}
+    .recent li{column-gap:8px}
+    .card{padding:18px 14px}
+    .links{grid-template-columns:1fr}
+    .opt span{font-size:17px}
+    .dot{flex-basis:40px;width:40px;height:40px;margin-right:10px}
+  }
+
+  /* ===== 시안 12: 움직임 (투명도·위치만 바꿈, 동작 줄이기 설정이면 끔) ===== */
+  /* 본문 글자 16px 이상 */
+  figcaption .t{font-size:16px}
+  figcaption .m{font-size:15px}
+  .recent .rt{font-size:16px}
+  .recent .rp{font-size:15px}
+  .cols li{font-size:16px}
+  table{font-size:16px}
+  td.p,td.pl{font-size:15px}
+  details li{font-size:16px}
+  .card .sub{font-size:16px}
+  footer{font-size:15px}
+  @media (max-width:560px){ td.n{font-size:16px} td.y{font-size:15px} td.p,td.pl{font-size:15px} }
+
+  /* 입장 막 */
+  #curtain{position:fixed;top:0;right:0;bottom:0;left:0;z-index:100;background:#44573a;color:#dfe5d3;display:none;
+           flex-direction:column;align-items:center;justify-content:center;gap:18px;
+           transition:transform 1.1s cubic-bezier(.7,0,.2,1), opacity 1.1s ease;padding:24px}
+  #curtain.on{display:flex}
+  #curtain.up{transform:translateY(-100%);opacity:.9}
+  #curtain .cname{font-family:"Nanum Myeongjo",serif;font-weight:800;font-size:clamp(34px,11vw,64px);letter-spacing:.16em;margin-left:.16em;line-height:1.2}
+  #curtain .csub{font-family:"Nanum Myeongjo",serif;font-size:14px;letter-spacing:.3em;opacity:.85}
+  #curtain button{position:absolute;right:calc(16px + var(--sr));bottom:calc(20px + var(--sb));color:#dfe5d3;border:1.5px solid rgba(223,229,211,.7);
+           border-radius:22px;padding:10px 18px;font-size:16px;font-weight:700;background:transparent}
+  /* 대표작 서서히 */
+  html.js .hero figure.fade{opacity:0;transition:opacity 1.4s ease}
+  html.js .hero figure.fade.in{opacity:1}
+  /* 스크롤 등장 */
+  html.js .rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease, transform .7s ease}
+  html.js .rv.in{opacity:1;transform:none}
+
+  /* 연작 넘기기 */
+  .series .sbar{display:none}
+  .series.car .sbar{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:14px;flex-wrap:nowrap}
+  .series .sbar button{min-height:48px;min-width:48px;padding:10px 16px;border:1.5px solid var(--pome);border-radius:24px;background:#fff;color:var(--pome);font-size:16px;font-weight:700;white-space:nowrap}
+  .series .sbar button[disabled]{opacity:.35}
+  .series .sbar .scount{min-width:52px;text-align:center;font-size:16px;font-weight:700;white-space:nowrap}
+  .series .stoggle{display:block;margin:0 0 14px auto;font-size:15px;font-weight:700;color:var(--pome);padding:8px 14px;border:1px solid var(--line);border-radius:18px;background:#fff}
+  .series .shead{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin-bottom:16px}
+  .series .shead h3{border-bottom:0;margin-bottom:0}
+  .series .shead .stoggle{margin:0 0 8px}
+  .series.car .grid{display:block}
+  .series.car .grid figure{display:none}
+  .series.car .grid figure.cur{display:block}
+  .series.car .grid figure.cur .zoom{min-height:0}
+  .series.car .grid img{max-height:70vh;max-height:70dvh}
+  @keyframes kfR{from{opacity:0;transform:translateX(48px)}to{opacity:1;transform:none}}
+  @keyframes kfL{from{opacity:0;transform:translateX(-48px)}to{opacity:1;transform:none}}
+  .series.car .grid figure.cur.fr{animation:kfR .5s ease}
+  .series.car .grid figure.cur.fl{animation:kfL .5s ease}
+  @media (max-width:300px){ .series .sbar button{padding:10px 12px} .series .sbar{gap:6px} }
+
+  /* 동작 줄이기: 모든 움직임 끔 */
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation:none!important;transition:none!important}
+    html.js .rv,html.js .hero figure.fade{opacity:1!important;transform:none!important}
+    #curtain{display:none!important}
+  }
+  /* 시안 13: 작품 장 글자 */
+  #works figcaption .t{font-size:18px;font-weight:800;color:#44573a}
+  #works figcaption .m{font-weight:500;color:#262b22}
+  /* 메뉴 막대: 240~412px에서 한 줄 */
+  nav .wrap{flex-wrap:nowrap;gap:0 8px;padding-top:0;padding-bottom:0}
+  #navback{flex:0 0 auto;display:none;font-size:13px;font-weight:700;color:var(--pome);padding:8px 2px 8px 0;white-space:nowrap;line-height:1}
+  #navback.on{display:inline-block}
+  nav .logo{flex:0 1 auto;min-width:0;overflow:hidden}
+  nav ul{flex:0 0 auto;flex-wrap:nowrap;margin-left:auto;gap:0 clamp(8px,3.6vw,18px);font-size:clamp(12px,3.6vw,14px)}
+  @media (max-width:360px){
+    nav .wrap{padding-left:calc(12px + var(--sl));padding-right:calc(12px + var(--sr));gap:0 6px}
+    nav .logo{font-size:14px;letter-spacing:.02em}
+    #navback{font-size:12px}
+  }
+</style>
+<script>
+(function(){
+  var d=document.documentElement, rm=false;
+  try{ rm=window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches; }catch(e){}
+  if(!rm && ("IntersectionObserver" in window)) d.className+=" js";
+})();
+</script>
+</head>
+<body>
+<div id="curtain" aria-hidden="true"><div class="cname">손주희</div><div class="csub">SON JU HEE</div><button type="button" id="cskip">건너뛰기</button></div>
+<script>
+(function(){
+  var c=document.getElementById("curtain"), rm=false, seen=false;
+  try{ rm=window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches; }catch(e){}
+  try{ seen=localStorage.getItem("sonjuhee_intro")==="1"; }catch(e){ try{ seen=sessionStorage.getItem("sonjuhee_intro")==="1"; }catch(e2){ seen=!!window.__khIntro; } }
+  if(rm || seen){ return; }
+  c.classList.add("on");
+  try{ localStorage.setItem("sonjuhee_intro","1"); }catch(e){ try{ sessionStorage.setItem("sonjuhee_intro","1"); }catch(e2){ window.__khIntro=1; } }
+  var done=false;
+  function lift(){ if(done) return; done=true; c.classList.add("up"); setTimeout(function(){ c.classList.remove("on"); c.parentNode && c.parentNode.removeChild(c); }, 1150); }
+  document.getElementById("cskip").addEventListener("click", function(){ c.style.transition="none"; done=true; c.parentNode.removeChild(c); });
+  setTimeout(lift, 650);
+})();
+</script>
+
+<nav>
+  <div class="wrap">
+    <button type="button" id="navback" aria-label="이전 화면으로">‹ 이전</button>
+    <a class="logo" href="index.html">손주희<span>.</span></a>
+    <ul>
+      <li><a href="index.html" class="on" aria-current="page">홈</a></li>
+      <li><a href="works.html">작품</a></li>
+      <li><a href="career.html">약력</a></li>
+      <li><a href="contact.html">연락처</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <p class="eyebrow">미술동인시선 이사</p>
+    <h1>손주희</h1>
+    <p class="en">SON JU HEE</p>
+    <figure><button class="zoom" type="button" aria-label="계절의 속삭임 크게 보기"><img src="images/01.jpg" width="1203" height="1563" alt="계절의 속삭임" fetchpriority="high"></button><figcaption><span class="t">계절의 속삭임</span><span class="m">53.0 x 40.9cm, Oil on Canvas</span></figcaption></figure>
+    <div class="recent">
+      <h2>최근 전시</h2>
+      <ul>
+      <li><b>2026</b><span class="rt">창립30주년 미술동인시선展</span></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-title"><h2>작업 이야기</h2><small>ABOUT</small></div>
+    <div class="about-grid">
+      <figure class="portrait">
+        <img src="profile.jpg" width="244" height="301" alt="손주희 작가">
+        <figcaption>손주희 작가</figcaption>
+      </figure>
+      <div>
+        <div class="note">
+          <h3>작품 세계</h3>
+          <p>손주희 작가는 계곡과 바닷가 마을, 계절이 바뀌는 풍경을 유화로 그립니다. 바위를 타고 흘러내리는 계곡물, 소나무 너머로 지붕이 겹쳐 보이는 바닷가 마을처럼 자연의 한 장면을 고요히 바라보는 시선으로 화폭에 옮깁니다.</p><p>빛과 그림자, 맑은 색채와 붓결이 만드는 질감으로 풍경의 서정을 담아, 보는 이가 저마다의 향수를 떠올리도록 자연의 숨결을 차분하게 전합니다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© SON JU HEE. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-label="작품 크게 보기">
+  <img alt="">
+  <div class="cap"></div>
+  <div class="lbnav"><button type="button" id="lbPrev">‹ 이전</button><span class="dotsep">·</span><span class="count" id="lbCount">1 / 20</span><span class="dotsep">·</span><button type="button" id="lbNext">다음 ›</button></div>
+  <button type="button" class="lbclose">닫기</button>
+</div>
+<button id="totop" type="button">↑ 맨 위로</button>
+
+<script>
+(function(){
+  // ‹ 이전: 이 사이트 안에서 지나온 화면이 있을 때만 보인다
+  var back=document.getElementById("navback"), here=location.pathname.split("/").pop()||"index.html";
+  function readStack(){ try{ return JSON.parse(sessionStorage.getItem("sonjuhee_trail")||"[]"); }catch(e){ return null; } }
+  function saveStack(st){ try{ sessionStorage.setItem("sonjuhee_trail", JSON.stringify(st)); }catch(e){} }
+  function navType(){ try{ var n=performance.getEntriesByType("navigation")[0]; return n?n.type:""; }catch(e){ return ""; } }
+  function update(isBack){
+    var st=readStack(), show=false;
+    if(st){
+      if(isBack){ if(st.length>1 && st[st.length-2]===here){ st.pop(); } else if(st[st.length-1]!==here){ st.push(here); } }
+      else if(st[st.length-1]!==here){ st.push(here); }
+      saveStack(st); show=st.length>1;
+    } else {
+      try{ show=!!document.referrer && new URL(document.referrer).origin===location.origin; }catch(e){ show=false; }
+    }
+    if(show) back.classList.add("on"); else back.classList.remove("on");
+  }
+  update(navType()==="back_forward");
+  window.addEventListener("pageshow",function(e){ if(e.persisted) update(true); });
+  back.addEventListener("click",function(){ history.back(); });
+  var totop=document.getElementById("totop");
+  function sy(){ return window.pageYOffset || document.documentElement.scrollTop || 0; }
+  function onScroll(){ var d=document.documentElement; var atBottom = sy()+window.innerHeight >= d.scrollHeight-60;
+    if (atBottom && sy()>200) totop.classList.add("on"); else totop.classList.remove("on"); }
+  window.addEventListener("scroll",onScroll,{passive:true}); window.addEventListener("resize",onScroll); onScroll();
+  totop.addEventListener("click",function(){ try{ window.scrollTo({top:0,behavior:"smooth"}); }catch(e){ window.scrollTo(0,0); } });
+  // 작품 크게 보기: 아래 줄에서 이전·다음으로 한 점씩 넘긴다(그림 위에는 아무것도 얹지 않음)
+  var lb=document.getElementById("lb"), lbImg=lb.querySelector("img"), lbCap=lb.querySelector(".cap");
+  var prev=document.getElementById("lbPrev"), next=document.getElementById("lbNext"), cnt=document.getElementById("lbCount");
+  var items=Array.prototype.slice.call(document.querySelectorAll(".zoom")), cur=0;
+  function show(i){
+    cur=(i+items.length)%items.length;
+    var b=items[cur], img=b.querySelector("img"), cap=b.parentNode.querySelector("figcaption");
+    lbImg.src=img.src; lbImg.alt=img.alt; lbCap.innerHTML=cap?cap.innerHTML:"";
+    cnt.textContent=(cur+1)+" / "+items.length;
+    prev.disabled=(cur===0); next.disabled=(cur===items.length-1);
+  }
+  if(items.length<2){ document.querySelector(".lbnav").style.display="none"; }
+  items.forEach(function(b,i){ b.addEventListener("click",function(){ show(i); lb.classList.add("on"); }); });
+  prev.addEventListener("click",function(e){ e.stopPropagation(); if(cur>0) show(cur-1); });
+  next.addEventListener("click",function(e){ e.stopPropagation(); if(cur<items.length-1) show(cur+1); });
+  lbImg.addEventListener("click",function(e){ e.stopPropagation(); });
+  lbCap.addEventListener("click",function(e){ e.stopPropagation(); });
+  lb.addEventListener("click",function(){ lb.classList.remove("on"); });
+  var sx=null;
+  lb.addEventListener("touchstart",function(e){ sx=e.touches[0].clientX; },{passive:true});
+  lb.addEventListener("touchend",function(e){ if(sx===null) return; var dx=e.changedTouches[0].clientX-sx; sx=null;
+    if(dx>50 && cur>0) show(cur-1); else if(dx<-50 && cur<items.length-1) show(cur+1); },{passive:true});
+  document.addEventListener("keydown",function(e){ if(!lb.classList.contains("on")) return;
+    if(e.key==="ArrowLeft" && cur>0) show(cur-1); else if(e.key==="ArrowRight" && cur<items.length-1) show(cur+1); else if(e.key==="Escape") lb.classList.remove("on"); });
+  // 고요한 등장: 화면에 들어올 때 아래에서 떠오르듯
+  (function(){
+    if((" "+document.documentElement.className+" ").indexOf(" js ")<0) return;
+    var hf=document.querySelector(".hero figure"); if(hf){ hf.classList.add("fade"); setTimeout(function(){ hf.classList.add("in"); }, 120); }
+    var sel=".sec-title,.recent,.portrait,.quote,.note,.series,.stats,.cols>div,.block,.contact-grid>.card,.links";
+    var els=Array.prototype.slice.call(document.querySelectorAll(sel));
+    var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }); },{rootMargin:"0px 0px -8% 0px",threshold:0.06});
+    els.forEach(function(el){ el.classList.add("rv"); io.observe(el); });
+  })();
+})();
+</script>
+</body>
+</html>
